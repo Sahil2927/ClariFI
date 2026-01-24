@@ -2,7 +2,7 @@
 
 A complete RAG (Retrieval-Augmented Generation) system for assessing microfinance eligibility using unconventional data sources (mobile metadata, psychometrics, financial behavior, social networks) and research evidence.
 
-## 🎯 Overview
+## Overview
 
 This system:
 - Ingests research PDFs to build a knowledge base
@@ -12,7 +12,7 @@ This system:
 - Provides a Streamlit UI for user interaction
 - Stores consented submissions in a bank database (sandbox)
 
-## 📋 Features
+## Features
 
 - **Knowledge Base Ingestion**: Extract, chunk, and embed research PDFs using sentence-transformers and FAISS
 - **RAG-based Assessment**: Use Groq LLM (Mixtral/Llama3/Gemma) to make eligibility decisions based on retrieved research
@@ -21,7 +21,7 @@ This system:
 - **Admin View**: View consented submissions (password-protected)
 - **Privacy-First**: Only aggregated features shared, raw data can be deleted
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -69,7 +69,7 @@ This system:
      python move_pdfs_to_research_folder.py
      ```
 
-## 📚 Usage
+## Usage
 
 ### Option 1: Google Colab (Recommended)
 
@@ -152,7 +152,7 @@ The app will open in your browser at `http://localhost:8501`
    - Password: `admin123` (change in production!)
    - View all consented submissions
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 GigBridge/
@@ -195,7 +195,7 @@ GigBridge/
 └── README.md
 ```
 
-## 📊 Profile Schema
+## Profile Schema
 
 User profiles follow this exact schema:
 
@@ -240,7 +240,7 @@ User profiles follow this exact schema:
 }
 ```
 
-## 🔍 RAG Output Schema
+## RAG Output Schema
 
 The RAG agent returns:
 
@@ -258,7 +258,7 @@ The RAG agent returns:
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 Run unit tests:
 
@@ -278,7 +278,7 @@ pytest tests/ -v
 
 **Note:** Some tests require the FAISS index to be built first (run ingestion).
 
-## 🔐 Privacy & Ethics
+## Privacy & Ethics
 
 ### Ethical Scoring Principles
 
@@ -305,7 +305,7 @@ If a user disputes an eligibility decision:
 - **Audit Logs**: All actions logged for compliance
 - **No External Sharing**: Data never shared outside the system without consent
 
-## 🛠️ Configuration
+## Configuration
 
 ### Groq Models
 
@@ -327,7 +327,7 @@ Alternatives:
 - `all-mpnet-base-v2` (768 dimensions, better quality, slower)
 - `paraphrase-multilingual-MiniLM-L12-v2` (for multilingual)
 
-## 📝 Example Usage
+## Example Usage
 
 ### Example 1: Using Python API
 
@@ -382,7 +382,7 @@ print(f"Eligibility: {decision['eligibility']}")
 print(f"Risk Score: {decision['risk_score']}")
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: "FAISS index not found"
 
@@ -420,7 +420,7 @@ ls research_papers/*.pdf
 
 This project is provided as-is for research and educational purposes.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Research papers in `research_papers/` folder
 - Groq for LLM API
@@ -428,14 +428,14 @@ This project is provided as-is for research and educational purposes.
 - FAISS for vector search
 - Streamlit for UI
 
-## 📧 Support
+## Support
 
 For issues or questions:
 1. Check the troubleshooting section
 2. Review the test files for usage examples
 3. Check `logs/actions.log` for error details
 
-## 🔄 Future Enhancements
+## Future Enhancements
 
 - [ ] Multi-language support
 - [ ] Calibration utility for risk scores
@@ -447,4 +447,5 @@ For issues or questions:
 ---
 
 **Built with ❤️ for ethical AI in microfinance**
+
 
